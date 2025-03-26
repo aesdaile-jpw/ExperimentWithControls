@@ -45,6 +45,32 @@
                 SemanticProperties.Description="The Text the user entered"
                 BackgroundColor="Gold" Margin="0,0,0,20" TextColor="Black"/>
 
+            <Stepper Minimum="0" Maximum="10" Increment="1" 
+                     SemanticProperties.Description="Stepper value input"
+                     ValueChanged="Stepper_ValueChanged"/>
+
+            <Label Text="Here's the stepper value:" 
+                   BackgroundColor="LightBlue" 
+                   TextColor="Black"/>
+
+            <Label x:Name="StepperValue" 
+                   BackgroundColor="LightBlue" 
+                   TextColor="Black"
+                   SemanticProperties.Description="The value the stepper entered"/>
+
+            <Slider Minimum="0" Maximum="1" 
+                    SemanticProperties.Description="Slider value input"
+                    ValueChanged="Slider_ValueChanged"/>
+
+            <Label Text="Here's the slider value:"
+                   BackgroundColor="LightBlue" 
+                   TextColor="Black"/>
+
+            <Label x:Name="SliderValue" 
+                   BackgroundColor="LightBlue" 
+                   TextColor="Black"
+                   SemanticProperties.Description="The value the slider entered"/>
+
         </VerticalStackLayout>
     </ScrollView>
 
