@@ -30,6 +30,21 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+
+            <Entry 
+                Placeholder="Enter some text"
+                SemanticProperties.Hint="Lets you enter some text"
+                TextChanged="Entry_TextChanged"
+                />
+
+            <Label Text="Here's what you typed:"
+                   SemanticProperties.Description="Here's what you typed:"/>
+
+            <Label 
+                x:Name="EnteredText"
+                SemanticProperties.Description="The Text the user entered"
+                BackgroundColor="Gold" Margin="0,0,0,20" TextColor="Black"/>
+
         </VerticalStackLayout>
     </ScrollView>
 

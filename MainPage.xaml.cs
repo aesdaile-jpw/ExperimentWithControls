@@ -20,6 +20,11 @@
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
+
+        private void Entry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            EnteredText.Text = e.NewTextValue;
+        }
     }
 
 }
