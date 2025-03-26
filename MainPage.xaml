@@ -7,7 +7,8 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Image
+            
+            <!--<Image
                 Source="dotnet_bot.png"
                 HeightRequest="185"
                 Aspect="AspectFit"
@@ -29,8 +30,8 @@
                 Text="Click me" 
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
-
+                HorizontalOptions="Fill" />-->
+            
             <Entry 
                 Placeholder="Enter some text"
                 SemanticProperties.Hint="Lets you enter some text"
@@ -51,7 +52,8 @@
 
             <Label Text="Here's the stepper value:" 
                    BackgroundColor="LightBlue" 
-                   TextColor="Black"/>
+                   TextColor="Black"
+                   SemanticProperties.Description="Here's the stepper value"/>
 
             <Label x:Name="StepperValue" 
                    BackgroundColor="LightBlue" 
@@ -64,12 +66,33 @@
 
             <Label Text="Here's the slider value:"
                    BackgroundColor="LightBlue" 
-                   TextColor="Black"/>
+                   TextColor="Black"
+                   SemanticProperties.Description="Here's the slider value"/>
 
             <Label x:Name="SliderValue" 
                    BackgroundColor="LightBlue" 
                    TextColor="Black"
                    SemanticProperties.Description="The value the slider entered"/>
+
+            <HorizontalStackLayout Spacing="20">
+
+                <VerticalStackLayout>
+                    <Label Text="Pick a bird" SemanticProperties.Description="Picks a bird" />
+                    <Picker x:Name="BirdPicker" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout>
+                    <Label Text="Some Birds"
+                           SemanticProperties.Description="A list of birds"/>
+                    <Label x:Name="Birds"
+                           Padding="10" MinimumWidthRequest="150"
+                           TextColor="White" BackgroundColor="DarkBlue"
+                           SemanticProperties.Description="Shows the added birds"/>
+                </VerticalStackLayout>
+                    
+            </HorizontalStackLayout>
+            <Button x:Name="AddBird" Text="Add a Bird" Margin="0,0,0,20" 
+                    SemanticProperties.Hint="Adds a bird" Clicked="AddBird_Clicked"/>
 
         </VerticalStackLayout>
     </ScrollView>
