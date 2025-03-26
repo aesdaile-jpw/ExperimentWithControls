@@ -87,7 +87,7 @@
                     <Label x:Name="Birds"
                            Padding="10" MinimumWidthRequest="150"
                            TextColor="White" BackgroundColor="DarkBlue"
-                           SemanticProperties.Description="Shows the added birds"/>
+                           SemanticProperties.Description="Shows the added birds" MaximumHeightRequest="200"/>
                 </VerticalStackLayout>
                     
             </HorizontalStackLayout>
